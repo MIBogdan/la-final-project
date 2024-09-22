@@ -1,0 +1,52 @@
+@import "../../style.scss";
+
+.posts {
+    @include themify($themes) {
+        display: flex;
+        flex-direction: column;
+        
+        gap: 50px;
+
+        .discover {
+            
+            width: 800px;
+            @include ipad {
+                width: 650px;
+            }
+    
+            @include mobile {
+                width: 350px;
+            }
+
+            h1 {
+                color: themed(textColor);
+                padding: 5px 10px;
+                border-bottom: solid 1px themed("border");
+                font-weight: bold;
+                @include ipad {
+                    font-size: 50px;
+                }
+        
+                @include mobile {
+                    font-size: 30px;
+                }
+            }
+
+            .loginBtn {
+                text-align: right;
+                button {
+                    background-color: transparent;
+                    box-shadow: none;
+                    border: none;
+                    color: themed("textColorsoft");
+                    cursor: pointer;
+                }
+            }
+
+            
+        }
+    }
+    
+
+    
+}

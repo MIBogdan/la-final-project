@@ -1,0 +1,145 @@
+@import "../../style.scss";
+
+.guest-wrapper {
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.guest-container {
+    @include themify($themes) {
+        width: 800px;
+        margin: 0 auto;
+
+        
+        
+        @include ipad {
+            width: 650px;
+        }
+
+        @include mobile {
+            width: 350px;
+        }
+
+    }
+    
+}
+
+.post {
+    @include themify($themes) {
+        
+        justify-content: center;
+        
+
+        -webkit-box-shadow: 0px 0px 4px 1px rgba(123, 123, 123, 0.72);
+        -moz-box-shadow: 0px 0px 4px 1px rgba(123, 123, 123,0.72);
+        box-shadow: 0px 0px 4px 1px rgba(123, 123, 123, 0.72);
+
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        
+        .container {
+            padding: 20px;
+            position: relative;
+            .user {
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+
+                .deletePost {
+                    position: absolute;
+                    
+                    right: 0;
+                    color: themed("textColorsoft");
+                    top: 0;
+                    
+                    border-radius: 5px;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px;
+                    
+                   .dots {
+                        align-self: flex-end;
+                        cursor: pointer;
+                        display: flex;
+                   }
+
+                   
+                    
+                    .openMenu {
+                        
+                        
+                        .deleteBtn {
+                            border: none;
+                            background: none;
+                            padding: 5px;
+                            cursor: pointer;
+
+                        }
+                    }
+                }
+
+                .dotsActive {
+                    background-color: themed("bgSoft");
+                   }
+                .userInfo {
+                    display: flex;
+                    gap: 20px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+    
+                        .name {
+                            font-weight: 500;
+                        }
+    
+                        .date {
+                            font-size: 12px;
+                        }
+                    }
+
+                    
+                }
+
+                
+                
+            }
+            .content {
+                margin: 20px 0;
+
+                img {
+                    width: 100%;
+                    max-height: 500px;
+                    object-fit: cover;
+                    margin-top: 20px;
+                }
+            }
+
+            .info {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+}
